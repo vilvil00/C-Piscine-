@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyakarer <tyakarer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:10:13 by tyakarer          #+#    #+#             */
-/*   Updated: 2024/01/28 15:46:41 by tyakarer         ###   ########.fr       */
+/*   Updated: 2024/01/28 16:11:27 by tyakarer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,23 @@ void	ft_print_outputs(int x, int y, int length, int height)
 {
 	if ((length == 1 && height == 1))
 	{
-		ft_putchar('/');
+		ft_putchar('A');
 	}
 	else if ((length == 1 && height == x) || (length == y && height == 1))
 	{
-		ft_putchar('\\');
+		ft_putchar('C');
 	}
 	else if ((length == y && height == x))
 	{
-		ft_putchar('/');
+		ft_putchar('A');
 	}
 	else if (length == 1 || length == y)
 	{
-		ft_putchar('*');
+		ft_putchar('B');
 	}
 	else if (height == 1 || height == x)
 	{
-		ft_putchar('*');
+		ft_putchar('B');
 	}
 	else
 	{
