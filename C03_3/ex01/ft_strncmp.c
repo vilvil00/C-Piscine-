@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/07 18:07:32 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/11 14:22:30 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (s1[i] > s2[i])
 		{
-			str[i] -= 32;
+			return (1);
+		}
+		else if (s1[i] < s2[i])
+		{
+			return (-1);
 		}
 		i++;
 	}
-	return (str);
+	return (0);
 }

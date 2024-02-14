@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/12 09:46:57 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/13 07:06:15 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+int	ft_is_prime(int nb)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
+	i = 2;
+	if (nb < 2)
+		return (0);
+	while (i <= nb / i)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
+		if (nb % i == 0)
+			return (0);
 		i++;
 	}
-	return (str);
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
+	if (nb < 2)
+		return (2);
+	while (nb >= 2)
+	{
+		if (ft_is_prime(nb) == 1)
+			return (nb);
+		nb++;
+	}
+	return (0);
 }

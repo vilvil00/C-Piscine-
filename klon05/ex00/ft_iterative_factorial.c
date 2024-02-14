@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/11 23:24:10 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/13 07:05:21 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+int	ft_iterative_factorial(int nb)
 {
-	int	i;
+	int	result;
 
-	i = 0;
-	while (str[i] != '\0')
+	result = 1;
+	while (nb > 0)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
-		i++;
+		result *= nb;
+		nb--;
 	}
-	return (str);
+	if (nb < 0)
+	{
+		return (0);
+	}
+	return (result);
 }

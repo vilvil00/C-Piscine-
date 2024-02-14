@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/07 19:55:56 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/10 14:43:40 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
+	j = 0;
+	while (dest[i])
 		i++;
+	while (j < nb && src[j])
+	{
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (str);
+	dest[i + j] = '\0';
+	return (dest);
 }

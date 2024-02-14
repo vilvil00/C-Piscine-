@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/12 07:39:43 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/13 07:05:45 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+#include <stdio.h> 
+
+int	ft_recursive_power(int nb, int power)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
+	i = nb;
+	if (power == 0)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
-		i++;
+		return (1);
 	}
-	return (str);
+	if (power < 0)
+	{
+		return (0);
+	}
+	if (power > 1)
+	{
+		return (nb * ft_recursive_power(nb, (power - 1)));
+	}
+	return (nb);
 }

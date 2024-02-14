@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/14 04:48:21 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/14 06:55:39 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+#include <stdlib.h>
+
+int	*ft_range(int min, int max)
 {
 	int	i;
+	int	*result;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (min >= max)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
+		return (0);
+	}
+	i = max - min;
+	result = (int *)malloc(sizeof(int) * (i));
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (max > min)
+	{
+		result[i] = min;
+		min++;
 		i++;
 	}
-	return (str);
+	return (result);
 }

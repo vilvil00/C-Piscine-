@@ -6,14 +6,22 @@
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 20:18:35 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 20:29:53 by vkose            ###   ########.fr       */
+/*   Updated: 2024/02/05 23:26:10 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_str_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
-    int i;
-	
+	int	i;
+
 	i = 0;
-	
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 32 && str[i] <= 126))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

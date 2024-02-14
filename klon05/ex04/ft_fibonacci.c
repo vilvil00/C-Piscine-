@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/12 07:44:51 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/13 07:05:50 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+int	ft_fibonacci(int index)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (index < 0)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
-		i++;
+		return (-1);
 	}
-	return (str);
+	if (index < 2)
+	{
+		return (index);
+	}
+	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
 }

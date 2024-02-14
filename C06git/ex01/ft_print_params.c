@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkose <vkose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 23:08:25 by vkose             #+#    #+#             */
-/*   Updated: 2024/02/05 23:34:25 by vkose            ###   ########.fr       */
+/*   Created: 2024/02/13 07:36:02 by vkose             #+#    #+#             */
+/*   Updated: 2024/02/13 07:47:58 by vkose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+#include <unistd.h>
+
+int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 1;
+	while (j < argc)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		while (argv[j][i] != '\0')
 		{
-			str[i] -= 32;
+			write(1, &argv[j][i], 1);
+			i++;
 		}
-		i++;
+		write (1, "\n", 1);
+		j++;
 	}
-	return (str);
 }
