@@ -1,6 +1,6 @@
 
 Hello! 👋
-42 Istanbul & 42 Kocaeli Software School Experience
+42 Istanbul Software School Experience
 During the intensive 26-day training period, I acquired over 300 hours of education in Shell and C programming languages, enhancing my technical skills. Throughout this process, I focused on gaining in-depth knowledge in areas such as pointers, memory management, argument usage, git, and GitHub.
 
 Restrictions and Professional Development
