@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tyakarer <tyakarer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tyakarer <vkose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:00:55 by tyakarer          #+#    #+#             */
 /*   Updated: 2024/01/28 15:38:03 by tyakarer         ###   ########.fr       */
