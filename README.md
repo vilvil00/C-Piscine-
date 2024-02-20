@@ -1,5 +1,5 @@
 
-Hello 👋 42 Istanbul & 42 Kocaeli Software School Experience During the 26-day intensive training period, I developed my technical skills by taking over 300 hours of training in Shell and C programming languages. During this process, I focused on gaining in-depth knowledge in areas such as pointers, memory management, argument usage, git and GitHub.
+Hello 👋 42 Istanbul Software School Experience During the 26-day intensive training period, I developed my technical skills by taking over 300 hours of training in Shell and C programming languages. During this process, I focused on gaining in-depth knowledge in areas such as pointers, memory management, argument usage, git and GitHub.
 
 Constraints and Professional Development:
 Due to the restrictions on using certain libraries during this training, I improved my ability to create solutions with only basic skills. This limitation allowed me to focus on basic skills and strengthen my core abilities.
